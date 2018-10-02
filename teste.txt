@@ -13,3 +13,32 @@ Passo 3
 touch teste.txt # Cria um arquivo teste.txt vazio.
 git add .   	# Adiciona todos os novos arquivos ao índice do repositório
 git commit -m "Primeiro commit"   # Comita todos os arquivos que estão no índice e foram modificados.
+
+
+COMPARTILHANDO NO GITHUB
+
+Passo 1
+Já estando cadastrado e logado, insira a chave SSH para poder comitar. No Git Bash:
+ssh-keygen -t rsa -C "seu_email@email.com"	# Serve para confirmar se o co0mando ssh é possível
+
+# Se foi recebida uma mensagem como "Hi username! You've successfully authenticated, but GitHub does not
+provide shell access", tudo está certo.
+
+
+Passo 2
+Vincule a pasta de origem do seu pc ao repositório
+git remote add origin git@github.com:Foxdhalia/Teste_Git.git
+
+Sub-Passo 2.1
+Teste se a pasta dop PC e o repositório forma vinculadas:
+git remote -v
+	#Deve aparecer 2 linhas apontando para o repositório do GitHub, uma com final "(fetch)" e a outra com final "(push)"
+
+Sub-Passo 2.2
+Caso algo esteja errado e seja necessário apontar um novo repositório:
+ git remote set-url origin git@github.com:Foxdhalia/Teste_Git.git 	# A parte "git@github.com:Foxdhalia/Teste_Git.git" é exemplificativa.
+
+
+Passo 3
+Envie os conteúdos do PC para o repositório.
+git push -u origin master
