@@ -19,7 +19,13 @@ COMPARTILHANDO NO GITHUB
 
 Passo 1
 Já estando cadastrado e logado, insira a chave SSH para poder comitar. No Git Bash:
-ssh-keygen -t rsa -C "seu_email@email.com"	# Serve para confirmar se o co0mando ssh é possível
+ssh-keygen -t rsa -C "seu_email@email.com"	# Cria a chave SSH.
+
+Sub-Passo 1.1
+Conferir se o comando ssh é possível:
+ssh -T git@github.com 	# Serve para confirmar se o comando ssh é possível no GitHub
+
+ssh -T git@bitbucket.org  	# Serve para confirmar se o comando ssh é possível no BitBucket
 
 # Se foi recebida uma mensagem como "Hi username! You've successfully authenticated, but GitHub does not
 provide shell access", tudo está certo.
@@ -42,3 +48,7 @@ Caso algo esteja errado e seja necessário apontar um novo repositório:
 Passo 3
 Envie os conteúdos do PC para o repositório.
 git push -u origin master
+
+OU
+
+git push origin master -f  ## Para forçar a substituição, caso o repositório (ex.: BitBucket) houver criado algum arquivo no remoto.
