@@ -1,0 +1,15 @@
+PASSOS NO GIT BASH
+
+CRIANDO O REPOSITÓRIO GIT NA SUA MÁQUINA
+
+Passo 1
+git config --global user.name "Nome Sobrenome" 
+git config --global user.email "seu_email@email.com"
+
+Passo 2
+git init
+
+Passo 3
+touch teste.txt # Cria um arquivo teste.txt vazio.
+git add .   	# Adiciona todos os novos arquivos ao índice do repositório
+git commit -m "Primeiro commit"   # Comita todos os arquivos que estão no índice e foram modificados.
